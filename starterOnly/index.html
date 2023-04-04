@@ -58,7 +58,7 @@
           <div class="modal-body">
             <form
               name="reserve"
-              action="index.html"
+              action="index.html" 
               method="get"
               onsubmit="return validate();"
             >
@@ -72,6 +72,7 @@
                   name="first"
                   minlength="2"
                 /><br>
+                <p id="firstNameErrorMsg"></p>
               </div>
               <div
                 class="formData">
@@ -82,6 +83,7 @@
                   id="last"
                   name="last"
                 /><br>
+                <p id="lastNameErrorMsg"></p>
               </div>
               <div
                 class="formData">
@@ -92,6 +94,7 @@
                   id="email"
                   name="email"
                 /><br>
+                <p id="emailErrorMsg"></p>
               </div>
               <div
                 class="formData">
@@ -102,15 +105,17 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <p id="birthdateErrorMsg"></p>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p id="quantityErrorMsg"></p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData">
+                class="formData" id="location">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -177,6 +182,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p id="locationErrorMsg"></p>
               </div>
 
               <div
@@ -192,20 +198,25 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
+                <p id="conditionErrorMsg"></p>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
               <input
                 class="btn-submit"
                 type="submit"
-                class="button"
+                id="button"
                 value="C'est parti"
               />
             </form>
+          </div>
+          <div class="validation">
+            <p>Merci pour votre inscription</p>
+            <button class="btn-validation">fermer</button>
           </div>
         </div>
       </div>
