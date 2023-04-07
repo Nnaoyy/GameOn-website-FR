@@ -51,7 +51,12 @@ function launchModal() {
 
 // close modal form
 modalClose.addEventListener("click",closeModal => {
+  if(formulaire.style.display == "none"){
+    window.location.reload()
+  }
+  else{
   modalbg.style.display = "none";
+}
 });
 
 //verif modal input
@@ -198,4 +203,5 @@ formSubmit.addEventListener("click",(e)=> {
 
 document.querySelector(".btn-validation").addEventListener("click",() => {
   modalbg.style.display = "none";
+  window.location.reload();
 });
